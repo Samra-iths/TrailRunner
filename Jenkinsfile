@@ -1,5 +1,17 @@
 pipeline {
     agent any 
+    parameters {
+        choice(name: 'gitBranches', choices: ['main', 'b1' , 'startMockito'], description: 'Select  Git branch')
+    }
+    stages {
+        stage('Checkout') {
+            
+                 steps {
+            
+                    checkout([$class: 'GitSCM', branches: [[name: "${params.gitBranches}"]], userRemoteConfigs: [[url: 'https://github.com/Samra-iths/Jenkins_trailer.git']]])
+                }
+            
+            }
       stage('Build') {
             steps {
                 bat "mvn compile"
