@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: "${params.gitBranches}", url: 'https://github.com/Samra-iths/Jenkins_trailer.git'
+                git branch: "${params.gitBranches}"
             }
         }
         
