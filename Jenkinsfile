@@ -1,15 +1,5 @@
 pipeline {
-    agent any
-    parameters {
-        choice(name: 'gitBranches', choices: ['main', 'b1' , 'startMockito'], description: 'Select  Git branch')
-    }
-    stages {
-        stage('Checkout') {
-            steps {
-                git branch: "${params.gitBranches}"
-            }
-        }
-        
+    agent any 
       stage('Build') {
             steps {
                 bat "mvn compile"
