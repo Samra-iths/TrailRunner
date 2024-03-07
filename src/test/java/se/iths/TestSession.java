@@ -15,7 +15,7 @@ public class TestSession {
 public void testSavedSessionWithOutDate(){
 
   Session sessionOne = new Session("SD123", 2, 1800);
-  LocalDate expecteddate= LocalDate.of(2024,01,12);
+  LocalDate expecteddate= LocalDate.now();
 
 assertEquals(expecteddate, sessionOne.date);
 
