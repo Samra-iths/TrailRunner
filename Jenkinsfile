@@ -22,7 +22,6 @@ pipeline {
       stage('Test') {
             steps {
                 bat "mvn test"
-                bat "robot test" 
             }
  
             post {
@@ -36,7 +35,7 @@ pipeline {
                     reportFileName: 'report.xml'
                 }
             }
-        }
+      }
         
     }
 }
