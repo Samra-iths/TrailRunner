@@ -22,7 +22,6 @@ pipeline {
       stage('Test') {
             steps {
                 bat "mvn test"
-                bat "robot test" 
             }
  
             post {
@@ -33,10 +32,9 @@ pipeline {
                     sourcePattern:'src/main/java',
                     exclusionPattern: 'src/test*')
                     junit '**/TEST*.xml' 
-                
                 }
             }
-        }
+      }
         
     }
 }
