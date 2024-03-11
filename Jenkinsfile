@@ -32,9 +32,7 @@ pipeline {
                     classPattern: 'target/classes',
                     sourcePattern:'src/main/java',
                     exclusionPattern: 'src/test*')
-                    junit '**/TEST*.xml'
-                    robot html: true, 
-                    logFileName: 'output.xml', 
+                    junit '**/TEST*.xml' 
                     reportFileName: 'report.html'
                 }
             }
