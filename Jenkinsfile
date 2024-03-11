@@ -15,12 +15,14 @@ pipeline {
       stage('Build') {
             steps {
                 bat "mvn compile"
+                
             }
       }
       
       stage('Test') {
             steps {
                 bat "mvn test"
+                bat "robot test" 
             }
  
             post {
@@ -31,6 +33,9 @@ pipeline {
                     sourcePattern:'src/main/java',
                     exclusionPattern: 'src/test*')
                     junit '**/TEST*.xml'
+                    robot html: true, 
+                    logFileName: 'output.xml', 
+                    reportFileName: 'report.html'
                 }
             }
         }
