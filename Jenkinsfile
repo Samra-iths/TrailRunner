@@ -32,7 +32,6 @@ pipeline {
                     sourcePattern:'src/main/java',
                     exclusionPattern: 'src/test*')
                     junit '**/TEST*.xml' 
-                    
                 }
             }
       }
