@@ -83,13 +83,9 @@ The user selects the dates and the car
 
     [Documentation]  Date Selection and Car Selection
     [Tags]      VG_test  book car
-
     
-    ${startDate}     2024-03-26
-    ${endDate}       2024-03-27
-    
-    Input Text    (//input[@id='start'])[1]    ${startDate}
-    Input Text    (//input[@id='end'])[1]   ${endDate}
+    Input Text    (//input[@id='start'])[1]    03-26
+    Input Text    (//input[@id='end'])[1]      03-27
     Click Button    //button[@id='continue']
     Wait Until Element Is Visible   //h1[@id="questionText"]
     Click Button   //tbody/tr[1]/td[5]/form[1]/input[4]
