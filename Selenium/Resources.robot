@@ -89,7 +89,7 @@ The user selects the dates and the car
     Click Button    //button[@id='continue']
     Wait Until Element Is Visible  //label[contains(text(),"Selected trip dates: 2024-03-26 – 2024-03-27")]
     Click Button   //tbody/tr[1]/td[5]/form[1]/input[4]
-    Wait Until Element Is Visible    //h1[@id='questionText]
+    Wait Until Element Is Visible    //label[@id="startDate"]
 
 The user pays
 
