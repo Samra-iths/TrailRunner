@@ -84,9 +84,9 @@ The user selects the dates and the car
     [Documentation]  Date Selection and Car Selection
     [Tags]      VG_test  book car
 
-    ${getDate}    Get Time
-    ${startDate}    Get Substring  ${getDate}        0     10
-    ${endDate}    Get Substring  ${getDate}        0     10
+    
+    ${startDate}   2024-03-26
+    ${endDate}    2024-03-27
     
     Input Text    (//input[@id='start'])[1]    ${startDate}
     Input Text    (//input[@id='end'])[1]   ${endDate}
