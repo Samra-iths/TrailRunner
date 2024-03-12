@@ -22,7 +22,7 @@ Choose and book car
     Given The user is at home page
     And The user sign in with her credential    ${email}    ${password}
     When The user selects the dates and the car
-    And The User Pays    ${cardNumber}     sam    4    5    234
+    And The User Pays    1234123412341234     sam    4    5    234
     Then The User Is Directed Booking Confirmation Page
 
 
